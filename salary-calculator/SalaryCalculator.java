@@ -4,7 +4,7 @@ public class SalaryCalculator {
     }
 
     public int bonusMultiplier(int productsSold) {
-        return productsSold > 20 ? 13 : 10;
+        return productsSold >= 20 ? 13 : 10;
     }
 
     public double bonusForProductsSold(int productsSold) {
@@ -13,6 +13,7 @@ public class SalaryCalculator {
 
     public double finalSalary(int daysSkipped, int productsSold) {
         double salary=1000.0*salaryMultiplier(daysSkipped)+bonusForProductsSold(productsSold);
-        return Math.min(salary, 2000.0);
+        return Math.min(salary, 2000.0); 
     } 
 }
+
