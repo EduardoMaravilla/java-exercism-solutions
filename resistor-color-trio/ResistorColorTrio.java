@@ -1,18 +1,10 @@
 public class ResistorColorTrio {
 
     String label(String[] colors) {
-        long color1 = 0;
-        long color2 = 0;
-        long color3 = 0;
-        for (long i = 0L; i < colors.length; i++) {
-            if (i == 0) {
-                color1 = valor(colors[(int) i]);
-            } else if (i == 1) {
-                color2 = valor(colors[(int) i]);
-            } else if (i == 2) {
-                color3 = valor(colors[(int) i]);
-            }
-        }
+        long color1 = valor(colors[0]);
+        long color2 = valor(colors[1]);
+        long color3 = valor(colors[2]);
+        
         long val = (long) ((color1 * 10L + color2) * Math.pow(10, color3));
         String prefijo = "";
         if (val > 1000000000L) {
@@ -41,5 +33,4 @@ public class ResistorColorTrio {
             default -> 0;
         };
     }
-
 }
