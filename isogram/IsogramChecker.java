@@ -1,8 +1,7 @@
 class IsogramChecker {
 
     boolean isIsogram(String phrase) {
-        phrase = phrase.replaceAll(" ", "");
-        phrase = phrase.replaceAll("-", "");
+        phrase = phrase.replaceAll("[ -]", "");        
         int control = 0;
         int longitud = phrase.length();
 
