@@ -1,19 +1,16 @@
 enum Allergen {
-    EGGS(1),
-    PEANUTS(2),
-    SHELLFISH(4),
-    STRAWBERRIES(8),
-    TOMATOES(16),
-    CHOCOLATE(32),
+    CATS(128),
     POLLEN(64),
-    CATS(128);
-
+    CHOCOLATE(32),
+    TOMATOES(16),
+    STRAWBERRIES(8),
+    SHELLFISH(4),
+    PEANUTS(2),
+    EGGS(1);
     private final int score;
-
     Allergen(int score) {
         this.score = score;
     }
-
     int getScore() {
         return score;
     }
